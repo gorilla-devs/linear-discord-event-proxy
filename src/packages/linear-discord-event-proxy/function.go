@@ -23,9 +23,9 @@ type HTTPRequest struct {
 		CfConnectingIP string `json:"cf-connecting-ip"`
 		CfIpcountry    string `json:"cf-ipcountry"`
 		CfRay          string `json:"cf-ray"`
-		CfVisitor      struct {
-			Scheme string `json:"scheme"`
-		} `json:"cf-visitor"`
+		// CfVisitor      struct {
+		// 	Scheme string `json:"scheme"`
+		// } `json:"cf-visitor"`
 		ContentType              string `json:"content-type"`
 		Host                     string `json:"host"`
 		LinearDelivery           string `json:"linear-delivery"`
