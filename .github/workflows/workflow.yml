@@ -24,7 +24,9 @@ jobs:
         token: ${{ secrets.DO_TOKEN }}
     - name: Install sandbox
       run: doctl sandbox install
-    - name: Install sandbox
+    - name: Connect sandbox
       run: doctl sandbox connect
+    - name: List files
+      run: ls
     - name: Deploy function
       run: doctl sandbox deploy ./src --verbose-build
