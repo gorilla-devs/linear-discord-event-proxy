@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Action for DigitalOcean - doctl
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.DO_TOKEN }}
+    - name: Deploy function
+      run: doctl sandbox deploy ./src --verbose-build
