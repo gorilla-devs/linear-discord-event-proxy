@@ -7,8 +7,6 @@ import (
 	"log"
 	"os"
 
-	"github.com/joho/godotenv"
-
 	"bytes"
 	"encoding/json"
 	"fmt"
@@ -135,11 +133,6 @@ type DiscordMessage struct {
 }
 
 func sendRequest(message string) error {
-
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
 
 	URL := os.Getenv("DISCORD_WEBHOOK")
 
