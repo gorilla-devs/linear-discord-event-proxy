@@ -15,32 +15,32 @@ import (
 )
 
 type HTTPRequest struct {
-	// OwHeaders struct {
-	// 	Accept         string `json:"accept"`
-	// 	AcceptCharset  string `json:"accept-charset"`
-	// 	AcceptEncoding string `json:"accept-encoding"`
-	// 	CdnLoop        string `json:"cdn-loop"`
-	// 	CfConnectingIP string `json:"cf-connecting-ip"`
-	// 	CfIpcountry    string `json:"cf-ipcountry"`
-	// 	CfRay          string `json:"cf-ray"`
-	// 	CfVisitor      struct {
-	// 		Scheme string `json:"scheme"`
-	// 	} `json:"cf-visitor"`
-	// 	ContentType              string `json:"content-type"`
-	// 	Host                     string `json:"host"`
-	// 	LinearDelivery           string `json:"linear-delivery"`
-	// 	LinearEvent              string `json:"linear-event"`
-	// 	UserAgent                string `json:"user-agent"`
-	// 	XDatadogParentID         string `json:"x-datadog-parent-id"`
-	// 	XDatadogSampled          string `json:"x-datadog-sampled"`
-	// 	XDatadogSamplingPriority string `json:"x-datadog-sampling-priority"`
-	// 	XDatadogTraceID          string `json:"x-datadog-trace-id"`
-	// 	XForwardedFor            string `json:"x-forwarded-for"`
-	// 	XForwardedProto          string `json:"x-forwarded-proto"`
-	// 	XRequestID               string `json:"x-request-id"`
-	// } `json:"__ow_headers"`
-	// OwMethod  string    `json:"__ow_method"`
-	// OwPath    string    `json:"__ow_path"`
+	OwHeaders struct {
+		Accept         string `json:"accept"`
+		AcceptCharset  string `json:"accept-charset"`
+		AcceptEncoding string `json:"accept-encoding"`
+		CdnLoop        string `json:"cdn-loop"`
+		CfConnectingIP string `json:"cf-connecting-ip"`
+		CfIpcountry    string `json:"cf-ipcountry"`
+		CfRay          string `json:"cf-ray"`
+		CfVisitor      struct {
+			Scheme string `json:"scheme"`
+		} `json:"cf-visitor"`
+		ContentType              string `json:"content-type"`
+		Host                     string `json:"host"`
+		LinearDelivery           string `json:"linear-delivery"`
+		LinearEvent              string `json:"linear-event"`
+		UserAgent                string `json:"user-agent"`
+		XDatadogParentID         string `json:"x-datadog-parent-id"`
+		XDatadogSampled          string `json:"x-datadog-sampled"`
+		XDatadogSamplingPriority string `json:"x-datadog-sampling-priority"`
+		XDatadogTraceID          string `json:"x-datadog-trace-id"`
+		XForwardedFor            string `json:"x-forwarded-for"`
+		XForwardedProto          string `json:"x-forwarded-proto"`
+		XRequestID               string `json:"x-request-id"`
+	} `json:"__ow_headers"`
+	OwMethod  string    `json:"__ow_method"`
+	OwPath    string    `json:"__ow_path"`
 	Action    string    `json:"action"`
 	CreatedAt time.Time `json:"createdAt"`
 	Data      struct {
