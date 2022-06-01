@@ -136,6 +136,7 @@ func sendRequest(message string) error {
 
 	URL := os.Getenv("DISCORD_WEBHOOK")
 
+	fmt.Println("url discord:", URL)
 	discordMessage := &DiscordMessage{
 		Content: message,
 	}
