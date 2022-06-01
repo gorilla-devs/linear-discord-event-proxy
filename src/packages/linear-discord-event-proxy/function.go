@@ -100,6 +100,8 @@ type Response struct {
 
 func Main(in map[string]interface{}) error {
 
+	log.Println("Started")
+
 	var inReq HTTPRequest
 	b, err := json.Marshal(in)
 	if err != nil {
