@@ -17,7 +17,7 @@ jobs:
         go-version: '1.17.0'
     - name: install_dependencies
       run: |
-        go install github.com/joho/godotenv
+        go get github.com/joho/godotenv
     - name: GitHub Action for DigitalOcean - doctl
       uses: actions/checkout@v2
       with:
