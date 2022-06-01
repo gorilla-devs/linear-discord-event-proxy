@@ -29,4 +29,6 @@ jobs:
     - name: Connect sandbox
       run: doctl sandbox connect
     - name: Deploy function
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: doctl sandbox deploy ./src
