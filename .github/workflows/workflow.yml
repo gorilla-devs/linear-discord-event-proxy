@@ -18,11 +18,13 @@ jobs:
     - name: install_dependencies
       run: |
         go get github.com/joho/godotenv
-    - name: GitHub Action for DigitalOcean - doctl
-      uses: actions/checkout@v2
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
       with:
-        repository: actions/checkout@v2
-        lfs: true
         token: ${{ secrets.DO_TOKEN }}
+    - name: Install sandbox
+      run: doctl sandbox install
+    - name: Install sandbox
+      run: doctl sandbox connect
     - name: Deploy function
       run: doctl sandbox deploy ./src --verbose-build
