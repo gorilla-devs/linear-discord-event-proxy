@@ -29,4 +29,4 @@ jobs:
     - name: Connect sandbox
       run: doctl sandbox connect
     - name: Deploy function
-      run: doctl sandbox deploy ./src --verbose-build
+      run: doctl sandbox deploy ./src
