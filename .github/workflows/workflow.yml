@@ -31,4 +31,4 @@ jobs:
     - name: Deploy function
       env:
         DISCORD_WEBHOOK: "${{ secrets.DISCORD_WEBHOOK }}"
-      run: doctl sandbox deploy ./src
+      run: DISCORD_WEBHOOK=${DISCORD_WEBHOOK} doctl sandbox deploy ./src
