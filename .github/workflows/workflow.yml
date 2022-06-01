@@ -21,6 +21,8 @@ jobs:
     - name: GitHub Action for DigitalOcean - doctl
       uses: actions/checkout@v2
       with:
+        repository: actions/checkout@v2
+        lfs: true
         token: ${{ secrets.DO_TOKEN }}
     - name: Deploy function
       run: doctl sandbox deploy ./src --verbose-build
