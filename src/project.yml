@@ -1,0 +1,17 @@
+targetNamespace: ''
+parameters: {}
+packages:
+  - name: linear-discord-event-proxy
+    environment: {}
+    parameters: {}
+    annotations: {}
+    actions:
+      - name: function
+        binary: false
+        main: ''
+        runtime: 'go:default'
+        web: true
+        parameters: {}
+        environment: {}
+        annotations: {}
+        limits: {}
